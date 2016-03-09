@@ -6,8 +6,11 @@ Got more time? See the 45 minute tutorial (location TBD).
 Want to see someone go through this demo? Check it out here (location TBD). 
 
 ## Pre-requisites
+* Install [Visual Studio 2015 Community](http://www.visualstudio.com) (or whatever version you already use), following the [VS TACO Installation Guide](http://taco.visualstudio.com/en-us/docs/install-vs-tools-apache-cordova/)
+* Install 
 ### Setup Mac Builds
-Don't have a Mac? Consider using [MacInCloud](http://www.macincloud.com).
+* Follow the instructions on the VS TACO documentation site: [iOS Setup Guide](http://taco.visualstudio.com/en-us/docs/ios-guide/).
+* Don't have a Mac? Consider using [MacInCloud](http://www.macincloud.com).
 
 ## Overview
 Kick off with a crash course in basics. Use the Intro slide deck available at (TBD).
