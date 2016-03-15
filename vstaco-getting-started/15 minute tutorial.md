@@ -64,7 +64,7 @@ Let's run the app in the browser and see what it looks like. In the Debug Toolba
 
 After the app is built, you will see the Google Chrome browser launch with your app loaded into the Ripple simulator. Ripple is an add-on to Google Chrome, useful for early debugging of an mobile web application. It provides features like device skinning, and simulation of features like device rotation. 
 
-![App home page loaded in Ripple simulator](/images/ripple.png)
+![App home page loaded in Ripple simulator](images/ripple.png)
 
 > **Note**: For this template, when you run the app in Ripple, you'll see error messages similar to the following. You can choose the **Success!** button and the app will continue to work for testing. These dialogs appear because this template is using Cordova plugins that will only work on an emulator or device, but will not work in Ripple.
 
