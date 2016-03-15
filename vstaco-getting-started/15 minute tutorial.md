@@ -10,7 +10,7 @@ Want to see someone go through this demo? Check it out here (location TBD).
 
 ## What will you learn in this session?
 * Learn how to create a new Apache Cordova project in Visual Studio.
-* Understand the basics of the Ionic framework, a popular JavaScript framework for Cordova developers.
+* (Really?) Understand the basics of the Ionic framework, a popular JavaScript framework for Cordova developers.
 * See how you can use Visual Studio to debug and test your app on Android, iOS, and Windows emulators and devices.
 
 ## Who is this session for?
@@ -18,7 +18,7 @@ This session is for any developer already familiar with Visual Studio. Prior exp
 
 ## What do you need to get started?
 * Windows 10
-* Install [Visual Studio 2015](http://www.visualstudio.com)
+* Install [Visual Studio 2015](http://www.visualstudio.com) Update 2
     * Include Apache Cordova features by following the [VS TACO Installation Guide](http://taco.visualstudio.com/en-us/docs/install-vs-tools-apache-cordova/)
     * Include the Visual Studio Emulator for Android feature
 * [Ionic Project Templates for Visual Studio](https://visualstudiogallery.msdn.microsoft.com/4e44ba8b-a4c8-4106-b70e-00d63241a54a)
@@ -38,15 +38,15 @@ Kick off with a crash course in basics. Use the Intro slide deck available at (T
 
 ## Build a sample application
 ### Step 1: Create a new project in Visual Studio
-First, launch Visual Studio 2015. Then, create a new project:
+First, launch Visual Studio 2015. Then, create a new project using the **File | New | Project...** menu.
 
-Select **Installed | Templates | JavaScript | Apache Cordova Apps | Ionic Tabs Template** as your project template.
+Browse to  **Installed | Templates | JavaScript | Apache Cordova Apps** in the new project dialog and choose the **Ionic Tabs Template** as your project template.
 
 ![Ionic Tabs Template](images/CreateBlankApp.png)
 
-Name the project and create it.
+Give your project a name and then click **OK**.
 
-> **Note**: Ionic is a popular JavaScript framework built for Cordova development. You can learn more about it at [http://www.ionicframework.com](http://www.ionicframework.com).
+> **Note**: This template uses the Ionic Framework, which is a popular JavaScript/CSS framework built for Cordova development. You can learn more about it at [http://www.ionicframework.com](http://www.ionicframework.com).
 
 You'll now see the default project structure in your solution explorer, it should look like the following.
 
@@ -55,38 +55,44 @@ You'll now see the default project structure in your solution explorer, it shoul
 A few things worth calling out here:
 * The `www` folder is where your main app source code lives. In this template, `www/index.html` is the first screen of your app.
 * `config.xml` is the Cordova configuration file.
-* The `plugins` folder is a home for plugins that let you access native device capabilities.
+* The `plugins` folder is a home for plugins. In Cordova, you use plugins to access native device capabilities, like the camera.
 
 ### Step 2: Run the project in the browser
-In the Debug Toolbar, choose the **Ripple - Nexus Galaxy** option to start debugging.
+Let's run the app in the browser and see what it looks like. In the Debug Toolbar, choose the **Ripple - Nexus Galaxy** option to start debugging.
 
 ![Debug | Start Debugging](images/startRipple.png)
 
-After the app is built, you will see the Google Chrome browser launch with your app contained in a mobile device simulator. This is the Ripple simulator. 
+After the app is built, you will see the Google Chrome browser launch with your app loaded into the Ripple simulator. Ripple is an add-on to Google Chrome, useful for early debugging of an mobile web application. It provides features like device skinning, and simulation of features like device rotation. 
 
 ![App home page loaded in Ripple simulator](/images/ripple.png)
 
-As you use the app in Ripple, you'll see messages similar to the following. You can choose the **Success!** button and the app will continue to work for testing. These dialogs appear because this template is using Cordova plugins that will work on an emulator or device, but will not work in Ripple.
+> **Note**: For this template, when you run the app in Ripple, you'll see error messages similar to the following. You can choose the **Success!** button and the app will continue to work for testing. These dialogs appear because this template is using Cordova plugins that will only work on an emulator or device, but will not work in Ripple.
 
 ![Dialog with "I Haz Cheeseburger?!?!" error](images/rippleError.png)
 
 > **Note**: The Ripple simulator is available to use in Visual Studio for both iOS and Android development. Windows apps will be simulated natively in Windows.
 
-You'll also see DOM Explorer and JavaScript Console windows opened in Visual Studio to help you debug the application.
+Back in Visual Studio, you'll see the DOM Explorer and JavaScript Console windows opened. These tools to help you debug your applications.
 
 ![DOM Explorer and JavaScript Console windows](images/DOMExplorerAndDebug.png)
 
-Finally, let's try out live reload. In the `www/templates/tabs.html` file, change the following code so that the Chats tab is named "Messages":
+When using Ripple, Visual Studio provides a live reload experience which rapidly pushes changes to the browser as you modify your source code. To see this in action, let's open the `www/templates/tabs.html` file and change code on line 14:
 
-![TBD](TBD)
+`<ion-tab title="Chats" icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes" href="#/tab/chats">`
+
+so that the Chats tab is named "Messages":
+
+`<ion-tab title="Messages" icon-off="ion-ios-chatboxes-outline" icon-on="ion-ios-chatboxes" href="#/tab/chats">`
 
 When you save the file you'll see that the Chrome browser is refreshed and your label change is made.
 
 ### Step 3: Run and debug on an Android Emulator
 
-Now, back in Visual Studio, let's use the Visual Studio Emulator for Android. From the Debug Target drop down, choose the "VS Emulator 5" KitKat (4.4) XXHDPI Phone" target and then click the option to run.
+Now, back in Visual Studio, let's use the Visual Studio Emulator for Android. From the Debug Target drop down, choose the "VS Emulator 5" KitKat (4.4) XXHDPI Phone" target:
 
-![Select VS Emulator target](images/StartOnAndroidEmulator.png) 
+![Select VS Emulator target](images/selectAndroidEmulatorTarget.png)
+
+And click on the ![Start Debugging on Android Emulator](images/startAndroidEmulator.png) button to run the app:
 
 The project will build and in a moment you'll see your application launch in the Visual Studio Emulator for Android.
 
@@ -100,7 +106,7 @@ The same Visual Studio DOM Explorer, JavaScript Console, and debugging tools you
 
 ![Setting a breakpoint](images/setBreakpoint.png)
 
-Now, in the running app go to the Messages tab. Use your cursor (or finger, on a touch screen device) to swipe the first message to the left. A Delete button will appear, tap on it.
+Now, in the running app go to the Messages tab. Use your cursor (or finger, on a touch screen device) to swipe the first message to the left. A **Delete** button will appear, tap on it.
 
 ![Delete button showing in the app](images/appDeleteButton.png)
 
@@ -115,15 +121,43 @@ Along with Ripple, and emulators, you can deploy to iOS, Android, or Windows dev
 
 We'll use the Remote Device workflow for this session, which enables you to connect an iOS device to a Mac and use Visual Studio to remotely debug your app running on that device.
 
-Connect an iOS device to the Mac you have setup with the `remotebuild` agent. Then, in Visual Studio, change the target device platform to **iOS** and select the **Remote Device** target. 
+Connect an iOS device to the Mac you have setup with the `remotebuild` agent. Then, in Visual Studio, change the target device platform to **iOS**:
+
+![Select iOS platform](images/selectiOSPlatform.png)
+
+and select the **Remote Device** target.
+
+![Select Remote Device target](images/selectiOSRemoteDevice.png)
+
+Then click on the ![Start Debugging on Remote Device](images/startOniOSRemoteDevice.png) button to run the app. 
 
 After the build is completed, your app will be deployed to the device. In Visual Studio, you'll see again that the DOM Explorer and debugging tools appear.
 
-In the DOM explorer, choose the **Inspect Element** option, and then tap an element on the screen of the physical device. You'll see that the item you selected on the device is now selected in the DOM Explorer.
+Let's try the DOM explorer this time. In Visual Studio, change to the DOM Explorer window and choose the **Select Element** option. Now, on the physical device, tap an element on the screen, using your finger. You'll see that the item you selected on the device is now selected in the DOM Explorer.
 
-![Select Element](images/inspectElement.png)
+![Select Element](images/domExplorerSelectElement.png)
 
-Go ahead and change some Style settings in Visual Studio and you'll see the changes appear live on your device, too.
+Changes made in the DOM explorer will appear live on your device. Using the **Select Element** button from above, click on the "Welcome" header in the home page of the app. Then, in the DOM explorer highlight the `h2` element that contains the Welcome text.
 
-![Change style on device](images/changeStyleOnDevice.png) 
+![](images/domExplorerHighlightHeader.png)
 
+Now, in the **Styles** pain on the right-side of the screen, click in the inline style section to add the following code:
+
+`
+background-color: red;
+`  
+
+When done, your DOM explorer window should look like the following and you'll see a red header in your app:
+
+![Change style on device](images/domExplorerChangeStyle.png) 
+
+Congratulations! You've just made it to the end of this session!
+
+In these 15 minutes you:
+* Created a simple mobile app using Apache Cordova and the Ionic framework.
+* Tested the app in the Ripple mobile simulator, on an Android emulator, and deployed the app to iOS.
+* Used Visual Studio to edit source files in the app and see them reload live in the browser.
+* Debugged JavaScript running in the app.
+* Modified the HTML DOM, live, using the DOM Explorer.
+
+For a next step, go to [taco.visualstudio.com](http://taco.visualstudio.com) to learn more about developing apps with Visual Studio and TACO.
