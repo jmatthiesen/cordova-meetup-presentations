@@ -28,14 +28,6 @@ This session is for any developer already familiar with Visual Studio. Prior exp
 
 > **Note**: If you're going to use an existing Visual Studio 2015 installation, be sure you have the latest Updates to Visual Studio and TACO.
 
-## Overview
-Kick off with a crash course in basics. Use the Intro slide deck available at (TBD).
-1. What is Apache Cordova?
-1. How does it work?
-1. What is Visual Studio?
-1. What is TACO?
-1. What does Visual Studio TACO do for you?
-
 ## Build a sample application
 ### Step 1: Create a new project in Visual Studio
 First, launch Visual Studio 2015. Then, create a new project using the **File | New | Project...** menu.
