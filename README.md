@@ -1,2 +1,2 @@
-# cordova-meetup-presentations
-A home for meetup presentations related to Apache Cordova.
+# cordova-presentations
+My home for presentations/hands-on-coding labs related to Apache Cordova.
